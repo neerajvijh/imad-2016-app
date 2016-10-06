@@ -8,6 +8,6 @@ element.innerHTML = "New Value";
 var img = document.getElementById('nee');
 img.onClick = function(){
    
-    img.style.maginleft = '100px';
+    img.style.maginLeft = '100px';
     
 } ;
