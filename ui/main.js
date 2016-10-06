@@ -23,14 +23,16 @@ button.onclick = function(){
   //rander the variable in correct span
 
  };
+ 
  //Make the request
+  var nameInput = document.getElementById('name');
+        var name1 = nameInput.value;
  request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name1?name1='+name1, true);
  request.send(null);
 };
 
 //Submit name
-        var nameInput = document.getElementById('name');
-        var name1 = nameInput.value;
+       
         var submit = document.getElementById('submit_btn');
         submit.onclick = function(){
             //Make a request to server & send the name
