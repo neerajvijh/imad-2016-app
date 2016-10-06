@@ -23,23 +23,20 @@ button.onclick = function(){
   //rander the variable in correct span
 
  };
- 
  //Make the request
-  var nameInput = document.getElementById('name');
-        var name1 = nameInput.value;
- request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name1?name1='+name1, true);
+ request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name?name='+name, true);
  request.send(null);
 };
 
 //Submit name
-       
+        
         var submit = document.getElementById('submit_btn');
         submit.onclick = function(){
             //Make a request to server & send the name
             
             //capture a list of names & render it as a list
             var names = request.responseText;
-            names = JSON.parse(names);
+            names = JSON.pars(names);
             var list = '';
             for ( var i = 0; i < names.length; i++){
                 list += '<li>' + names[i] + '</li>';
@@ -48,3 +45,9 @@ button.onclick = function(){
             var ul = document.getElementById('namelist');
             ul.innerHTML = list;
         };
+       //Make the request
+    var nameInput = document.getElementById('name');
+        var name1 = nameInput.value;   
+ request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name?name='+name, true);
+ request.send(null);
+}; 
