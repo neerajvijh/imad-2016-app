@@ -50,7 +50,7 @@ request.onreadystatechange = function (){
    };
        //Make the request
     var nameInput = document.getElementById('name');
-        var name1 = nameInput.value;   
- request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name1?name1='+name1, true);
+        var name = nameInput.value;   
+ request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name?name='+name, true);
  request.send(null);
 }; 
