@@ -44,7 +44,7 @@ button.onclick = function(){
             
             var ul = document.getElementById('namelist');
             ul.innerHTML = list;
-        };
+   
        //Make the request
     var nameInput = document.getElementById('name');
         var name1 = nameInput.value;   
