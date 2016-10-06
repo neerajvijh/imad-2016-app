@@ -24,7 +24,7 @@ button.onclick = function(){
 
  };
  //Make the request
- request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name?name='+name1, true);
+ request.open('GET','http://neerajvijh.imad.hasura-app.io/submit-name1?name1='+name1, true);
  request.send(null);
 };
 
