@@ -6,7 +6,7 @@ element.innerHTML = "New Value";
 
 //Move the image
 var img = document.getElementById('nee');
-img.onclick = function(){
+img.onClick = function(){
     img.style.maginleft = '100px';
     
 } 
