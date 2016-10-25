@@ -124,6 +124,25 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
+app.get('articles/:articleName', function (req, res) {
+    //articleName = article-one
+    var articleName = req.params.articleName;
+    pool.query("SELECT * FROM test_article" + articleName, function(err, result) {
+    if (err) 
+      {
+          res.status(500).send(err.toString());
+      }
+      else{
+          if(result.rowlength === 0){
+              res.status(404).send("Article not found");
+          }else{
+              var articleData = result.rows[0];
+              res.send(createTemplate(articles[articleData]));
+          }
+          res.send(JSON.stringify(result.rows));
+      }
+    });
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
