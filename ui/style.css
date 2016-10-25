@@ -29,4 +29,6 @@ body {
        }
  a:link {
     text-decoration: none;
+    max-width: 600px;
+    padding-left: 50px;
 }
